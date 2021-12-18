@@ -1,10 +1,9 @@
 let Knopf = 0
-basic.forever(function () {
-    if (input.buttonIsPressed(Button.A)) {
-        Knopf += -1
-    } else if (input.buttonIsPressed(Button.B)) {
-        Knopf += 1
-    }
+input.onButtonPressed(Button.A, function () {
+    Knopf += -1
+})
+input.onButtonPressed(Button.B, function () {
+    Knopf += 1
 })
 basic.forever(function () {
     if (Knopf == 1) {
